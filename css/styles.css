@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="css/styles.css">
 /* ===== CORE STYLES ===== */
 :root {
   --primary: #2E7D32;      /* Deep growth green */
@@ -23,6 +23,25 @@ body {
     radial-gradient(#c8e6c9 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
+    <!-- Grain texture overlay -->
+  <div class="grain-overlay"></div>
+  
+  <!-- Scroll animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 }
 
 h1, h2, h3, h4, h5, 
