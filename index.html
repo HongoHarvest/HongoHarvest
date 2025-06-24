@@ -3,55 +3,879 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HongoHarvest - Sustainable Agriculture</title>
+  <title>HongoHarvest - Transforming Zambian Agriculture</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-        /* Temporary styling */
-        body { 
-            font-family: sans-serif;
-            background-color: #f8f9fa;
-        }
-        .construction {
-            max-width: 800px;
-            margin: 5rem auto;
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-    </style>
+    /* Temporary spinner - will be replaced by CSS animations */
+    .construction-spinner {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      vertical-align: text-bottom;
+      border: 0.25em solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spinner-border .75s linear infinite;
+      color: #2E7D32;
+    }
+    
+    @keyframes spinner-border {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-    <div class="construction">
-        <h1>🌱 HongoHarvest</h1>
-        <p>Transforming Zambian agriculture through innovation</p>
-        <div class="mt-4">
-            <div class="spinner-border text-success" role="status"></div>
-            <p class="mt-3">Professional website launching soon</p>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.svg" alt="HongoHarvest" height="40">
+        <span class="ms-2 fw-bold">HongoHarvest</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  <section class="section section-light animate-on-scroll">
-  <div class="container">
-    <!-- Content -->
-  </div>
-</section>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section">
+    <img src="img/hero.webp" alt="Zambian farm landscape" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Transforming Zambian Agriculture</h1>
+      <p class="hero-subtitle">Sustainable solutions for tomorrow's harvest</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#register" class="btn btn-warning btn-lg hero-btn">Join Our Community</a>
+        <a href="#services" class="btn btn-outline-light btn-lg hero-btn">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section section-light animate-on-scroll">
+    <div class="container">
+      <div class="section-title">
+        <h2>About HongoHarvest</h2>
+        <p class="lead">Driving agricultural innovation in Zambia since 2010</p>
+      </div>
+      
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="text-gradient mb-4">Our Mission</h3>
+              <p>HongoHarvest empowers Zambian farmers through sustainable practices, modern technology, and community partnerships. We bridge traditional knowledge with innovative solutions to transform agriculture across the nation.</p>
+              
+              <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-seedling fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Sustainability</h4>
+                      <p>Eco-friendly farming practices that preserve Zambia's natural resources</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-hand-holding-usd fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Economic Growth</h4>
+                      <p>Increasing farmer incomes through value chain development</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Community</h4>
+                      <p>Building farmer cooperatives and knowledge-sharing networks</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-microscope fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Innovation</h4>
+                      <p>Research-driven solutions for Zambia's unique challenges</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <div class="ratio ratio-16x9">
+              <div class="bg-light border rounded overflow-hidden position-relative" style="background: url('img/about-placeholder.jpg') center/cover;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50">
+                  <a href="#" class="btn btn-success btn-lg"><i class="fas fa-play me-2"></i>Our Story</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex mt-4 gap-3">
+              <div class="flex-grow-1">
+                <div class="card bg-success text-white">
+                  <div class="card-body text-center p-3">
+                    <h2 class="mb-0">12,500+</h2>
+                    <p class="mb-0">Farmers Empowered</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-grow-1">
+                <div class="card bg-warning">
+                  <div class="card-body text-center p-3">
+                    <h2 class="mb-0">47</h2>
+                    <p class="mb-0">Communities Served</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-grow-1">
+                <div class="card bg-primary text-white">
+                  <div class="card-body text-center p-3">
+                    <h2 class="mb-0">8</h2>
+                    <p class="mb-0">Research Projects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section bg-light animate-on-scroll">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Agricultural Services</h2>
+        <p class="lead">Comprehensive solutions for Zambian farmers</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-success" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-hands-helping text-white fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Farmer Training Programs</h3>
+              <p>Hands-on workshops covering sustainable farming, irrigation, pest control, and modern techniques.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Seasonal crop planning</li>
+                <li><i class="fas fa-check text-success me-2"></i>Soil health management</li>
+                <li><i class="fas fa-check text-success me-2"></i>Water conservation</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-warning" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-tractor text-dark fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Equipment Sharing</h3>
+              <p>Access to modern farming equipment through our cooperative sharing program.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Tractor rentals</li>
+                <li><i class="fas fa-check text-success me-2"></i>Irrigation systems</li>
+                <li><i class="fas fa-check text-success me-2"></i>Harvesting tools</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">View Equipment</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-primary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-seedling text-white fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Seed Distribution</h3>
+              <p>Certified drought-resistant seeds adapted to Zambia's climate conditions.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Maize varieties</li>
+                <li><i class="fas fa-check text-success me-2"></i>Legumes & pulses</li>
+                <li><i class="fas fa-check text-success me-2"></i>Vegetable seeds</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">Seed Catalog</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-info" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-chart-line text-white fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Market Access</h3>
+              <p>Connect directly with buyers through our agricultural marketplace platform.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Fair pricing</li>
+                <li><i class="fas fa-check text-success me-2"></i>Contract farming</li>
+                <li><i class="fas fa-check text-success me-2"></i>Export opportunities</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">Join Marketplace</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-hand-holding-water text-white fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Water Solutions</h3>
+              <p>Rainwater harvesting systems and efficient irrigation technologies.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Drip irrigation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Water storage</li>
+                <li><i class="fas fa-check text-success me-2"></i>Conservation training</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">Water Programs</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-img-top bg-success" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-leaf text-white fa-4x"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Organic Certification</h3>
+              <p>Guidance and support for farmers transitioning to organic practices.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Certification process</li>
+                <li><i class="fas fa-check text-success me-2"></i>Pest management</li>
+                <li><i class="fas fa-check text-success me-2"></i>Soil enrichment</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-success">Get Certified</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="section section-light animate-on-scroll">
+    <div class="container">
+      <div class="section-title">
+        <h2>Upcoming Agricultural Events</h2>
+        <p class="lead">Join our knowledge-sharing community</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="bg-success h-100 d-flex align-items-center justify-content-center p-4">
+                  <div class="text-center text-white">
+                    <div class="display-4 fw-bold">24</div>
+                    <div class="fs-5">OCT</div>
+                    <div class="mt-3">9:00 AM - 4:00 PM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">Featured Event</span>
+                  <h3 class="card-title">Zambia Agricultural Innovation Summit</h3>
+                  <p class="card-text">Join industry leaders, researchers, and farmers to explore cutting-edge solutions for Zambia's agricultural future.</p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span class="badge bg-light text-dark"><i class="fas fa-map-marker-alt me-1"></i> Lusaka Convention Center</span>
+                    <span class="badge bg-light text-dark"><i class="fas fa-users me-1"></i> 250+ Attendees</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="text-success fw-bold">Free for registered farmers</span>
+                    </div>
+                    <a href="#register" class="btn btn-success">Register Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-header bg-warning text-dark">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <i class="fas fa-calendar me-2"></i>Nov 5, 2023
+                    </div>
+                    <div>
+                      <i class="fas fa-clock me-1"></i>10:00 AM
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Water Conservation Workshop</h4>
+                  <p class="card-text">Learn rainwater harvesting and efficient irrigation techniques for dry seasons.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-light text-dark">Irrigation</span>
+                    <span class="badge bg-light text-dark">Water Management</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-sm btn-outline-success">Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <i class="fas fa-calendar me-2"></i>Nov 18, 2023
+                    </div>
+                    <div>
+                      <i class="fas fa-clock me-1"></i>1:00 PM
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Organic Farming Certification</h4>
+                  <p class="card-text">Step-by-step guide to transitioning to organic practices and certification.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-light text-dark">Organic</span>
+                    <span class="badge bg-light text-dark">Certification</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-sm btn-outline-success">Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <i class="fas fa-calendar me-2"></i>Dec 3, 2023
+                    </div>
+                    <div>
+                      <i class="fas fa-clock me-1"></i>9:30 AM
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Crop Rotation Strategies</h4>
+                  <p class="card-text">Maximize soil health and yield through effective crop rotation planning.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-light text-dark">Soil Health</span>
+                    <span class="badge bg-light text-dark">Crop Planning</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-sm btn-outline-success">Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-header bg-info text-white">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <i class="fas fa-calendar me-2"></i>Dec 12, 2023
+                    </div>
+                    <div>
+                      <i class="fas fa-clock me-1"></i>2:00 PM
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Market Access Seminar</h4>
+                  <p class="card-text">Learn how to connect with buyers and get fair prices for your harvest.</p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-light text-dark">Marketing</span>
+                    <span class="badge bg-light text-dark">Value Chain</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-sm btn-outline-success">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="card sticky-top" style="top: 100px;">
+            <div class="card-header bg-success text-white">
+              <h3 class="mb-0">Events Calendar</h3>
+            </div>
+            <div class="card-body">
+              <div id="events-calendar" class="mb-4"></div>
+              <div class="d-grid">
+                <a href="#" class="btn btn-outline-success">
+                  <i class="far fa-calendar-alt me-2"></i>View Full Calendar
+                </a>
+              </div>
+            </div>
+            <div class="card-footer bg-light">
+              <h4>Subscribe to Updates</h4>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email address">
+                <button class="btn btn-success" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="section bg-success text-white animate-on-scroll">
+    <div class="container">
+      <div class="section-title">
+        <h2>Join the Agricultural Revolution</h2>
+        <p class="lead">Register as a participant or exhibitor</p>
+      </div>
+      
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <div class="card bg-dark text-white h-100">
+            <div class="card-header bg-warning text-dark">
+              <h3 class="mb-0">For Farmers & Participants</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Free Training Programs</h4>
+                      <p>Access our full curriculum of agricultural workshops</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Resource Sharing</h4>
+                      <p>Borrow equipment and access premium seeds</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Market Access</h4>
+                      <p>Connect directly with buyers through our platform</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex">
+                    <div class="me-3 text-success">
+                      <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Community Support</h4>
+                      <p>Join our network of 12,500+ Zambian farmers</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-top border-secondary">
+              <a href="register/participant.html" class="btn btn-warning w-100 btn-lg">
+                Register as Participant <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="card bg-dark text-white h-100">
+            <div class="card-header bg-info text-white">
+              <h3 class="mb-0">For Exhibitors & Partners</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-star fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Showcase Innovations</h4>
+                      <p>Demonstrate your products to thousands of farmers</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-star fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Networking Opportunities</h4>
+                      <p>Connect with key agricultural stakeholders</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-star fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Brand Visibility</h4>
+                      <p>Feature in our promotional materials and events</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-star fa-2x"></i>
+                    </div>
+                    <div>
+                      <h4>Research Partnerships</h4>
+                      <p>Collaborate on agricultural innovation projects</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer bg-transparent border-top border-secondary">
+              <a href="register/exhibitor.html" class="btn btn-info w-100 btn-lg">
+                Register as Exhibitor <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-light animate-on-scroll">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p class="lead">Get in touch with our agricultural experts</p>
+      </div>
+      
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4">Send us a message</h3>
+              <form name="contact" method="POST" netlify>
+                <div class="mb-3">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" name="name" class="form-control" required>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" name="email" class="form-control" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" name="phone" class="form-control">
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Subject</label>
+                  <select name="subject" class="form-select">
+                    <option value="">Select a topic</option>
+                    <option value="training">Training Programs</option>
+                    <option value="events">Event Information</option>
+                    <option value="partnership">Partnership Opportunities</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4">Contact Information</h3>
+              
+              <div class="d-flex mb-4">
+                <div class="me-4 text-success">
+                  <i class="fas fa-map-marker-alt fa-2x"></i>
+                </div>
+                <div>
+                  <h4>Our Headquarters</h4>
+                  <p class="mb-0">Agricultural Innovation Center</p>
+                  <p class="mb-0">Plot 123, Lusaka Road</p>
+                  <p>Lusaka, Zambia</p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-4 text-success">
+                  <i class="fas fa-phone-alt fa-2x"></i>
+                </div>
+                <div>
+                  <h4>Phone & Email</h4>
+                  <p class="mb-1"><strong>General Inquiries:</strong> +260 211 123 4567</p>
+                  <p class="mb-1"><strong>Training Programs:</strong> training@hongoharvest.org</p>
+                  <p class="mb-0"><strong>Partnerships:</strong> partners@hongoharvest.org</p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-4 text-success">
+                  <i class="fas fa-clock fa-2x"></i>
+                </div>
+                <div>
+                  <h4>Office Hours</h4>
+                  <p class="mb-1">Monday-Friday: 8:00 AM - 5:00 PM</p>
+                  <p class="mb-0">Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+              </div>
+              
+              <div class="mt-5">
+                <h4 class="mb-3">Regional Centers</h4>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="card bg-light border">
+                      <div class="card-body">
+                        <h5>Copperbelt Region</h5>
+                        <p class="mb-1">Kitwe Agricultural Hub</p>
+                        <p class="mb-0">+260 212 234 567</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="card bg-light border">
+                      <div class="card-body">
+                        <h5>Southern Region</h5>
+                        <p class="mb-1">Livingstone Farm Center</p>
+                        <p class="mb-0">+260 213 345 678</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card bg-light border">
+                      <div class="card-body">
+                        <h5>Eastern Region</h5>
+                        <p class="mb-1">Chipata Innovation Center</p>
+                        <p class="mb-0">+260 214 456 789</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card bg-light border">
+                      <div class="card-body">
+                        <h5>Northern Region</h5>
+                        <p class="mb-1">Kasama Agri Station</p>
+                        <p class="mb-0">+260 215 567 890</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="img/logo.svg" alt="Logo" height="50" class="mb-3">
+          <p class="mb-4">Transforming Zambian agriculture through innovation, sustainability, and community partnership.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="#">Farmers' Guide</a></li>
+            <li><a href="#">Research Papers</a></li>
+            <li><a href="#">Crop Calendar</a></li>
+            <li><a href="#">Market Prices</a></li>
+            <li><a href="#">Weather Updates</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-4">
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="mb-3">Subscribe for agricultural updates and event announcements.</p>
+          <form>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Your email address">
+              <button class="btn btn-success" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="mt-4">
+            <h5 class="footer-heading">Mobile App</h5>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light">
+                <i class="fab fa-google-play me-2"></i> Play Store
+              </a>
+              <a href="#" class="btn btn-outline-light">
+                <i class="fab fa-app-store me-2"></i> App Store
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom mt-5 pt-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; 2023 HongoHarvest. All rights reserved.
+          </div>
+          <div class="col-md-6">
+            <ul class="d-flex justify-content-center justify-content-md-end list-unstyled gap-4 mb-0">
+              <li><a href="#" class="text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-white">Terms of Service</a></li>
+              <li><a href="#" class="text-white">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <!-- Grain texture overlay -->
-<div class="grain-overlay"></div>
+  <div class="grain-overlay"></div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom Scripts -->
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll animations
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      elements.forEach(el => observer.observe(el));
+      
+      // Simple calendar placeholder
+      const calendarEl = document.getElementById('events-calendar');
+      if (calendarEl) {
+        calendarEl.innerHTML = `
+          <div class="bg-light border rounded p-3 text-center">
+            <div class="text-success mb-2">
+              <i class="far fa-calendar-alt fa-4x"></i>
+            </div>
+            <h4>Interactive Calendar</h4>
+            <p class="mb-0">Our full events calendar will be available soon</p>
+          </div>
+        `;
+      }
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+          navbar.classList.add('shadow');
+          navbar.classList.add('bg-success');
+        } else {
+          navbar.classList.remove('shadow');
+          navbar.classList.remove('bg-success');
         }
       });
-    }, { threshold: 0.1 });
-    
-    elements.forEach(el => observer.observe(el));
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
