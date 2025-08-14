@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HongoHarvest | Sustainable Agriculture</title>
+    <title>HongoHarvest | Sustainable Agriculture & AgriLink Youth Summit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Enhanced color scheme */
+        /* Updated color scheme with lighter green */
         :root {
-            --primary-green: #2E7D32; 
-            --secondary-green: #4CAF50;
+            --primary-green: #1b6d42; 
+            --secondary-green: #2E7D32;
             --light-green: #8BC34A;
-            --dark-green: #1B5E20;
+            --dark-green: #0f2f11;
             --neutral-gray: #616161;
             --light-bg: #F9F9F7;
             --white: #FFFFFF;
@@ -59,7 +59,7 @@
 
         header.scrolled {
             padding: 5px 40px;
-            background-color: rgba(255, 255, 255, 0.0);
+            background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
@@ -298,7 +298,7 @@
                         url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
             color: var(--white);
             text-align: center;
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -430,7 +430,7 @@
         }
 
         /* Section styling with enhanced visuals */
-        .about, .approach, .contact {
+        .about, .approach, .summit, .contact {
             background-color: var(--white);
             margin: 25px auto 50px;
             border-radius: 18px;
@@ -441,7 +441,7 @@
             padding: 70px 45px;
         }
 
-        .about::before, .approach::before, .contact::before {
+        .about::before, .approach::before, .summit::before, .contact::before {
             content: '';
             position: absolute;
             top: 0;
@@ -504,7 +504,7 @@
         .icon-container {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, rgba(46, 125, 50, 0.15), transparent);
+            background: linear-gradient(135deg, rgba(27, 109, 66, 0.15), transparent);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -599,7 +599,7 @@
             outline: none;
             border-color: var(--primary-green);
             box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
-            background-color: var(--black);
+            background-color: var(--white);
         }
 
         textarea {
@@ -802,7 +802,7 @@
             height: 42px;
             background-color: rgba(255,255,255,0.1);
             border-radius: 50%;
-            color: var(--yellow);
+            color: var(--accent-yellow);
             font-size: 1.1rem;
             transition: all 0.3s ease;
             position: relative;
@@ -873,6 +873,135 @@
             display: block;
         }
 
+        /* Summit section styling */
+        .summit-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .summit-details {
+            background: rgba(27, 109, 66, 0.05);
+            border-radius: 14px;
+            padding: 25px;
+            margin: 35px 0;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: rgba(27, 109, 66, 0.1);
+            border: none;
+            color: var(--primary-green);
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        .tab-content {
+            display: none;
+            background: var(--light-bg);
+            border-radius: 14px;
+            padding: 35px;
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .register-option {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .register-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .register-option h4 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .register-option ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .register-option li {
+            margin-bottom: 10px;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-green);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-yellow);
+            transform: rotate(90deg);
+        }
+
+        .modal-iframe {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            border-radius: 8px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             h1 {
@@ -899,7 +1028,7 @@
                 display: none;
             }
             
-            .hero, .about, .approach, .contact {
+            .hero, .about, .approach, .summit, .contact {
                 padding: 50px 25px;
             }
             
@@ -931,6 +1060,11 @@
             
             .hero {
                 min-height: 80vh;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -965,8 +1099,13 @@
                 width: 85%;
             }
             
-            .about, .approach, .contact {
+            .about, .approach, .summit, .contact {
                 padding: 45px 20px;
+            }
+            
+            .modal-content {
+                padding: 20px;
+                margin: 10% auto;
             }
         }
 
@@ -1001,7 +1140,7 @@
     <header>
         <div class="logo-container">
             <!-- Using the logo file from the main directory -->
-            <img src="HongoHarv_Logo.png" alt="HongoHarvest Logo" class="logo">
+            <img src="https://via.placeholder.com/60x60/1b6d42/ffffff?text=HH" alt="HongoHarvest Logo" class="logo">
             <div class="logo-text"><span></span></div>
         </div>
         
@@ -1010,9 +1149,10 @@
             <ul>
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="#approach"><i class="fas fa-cogs"></i> Our Approach</a></li>
+                <li><a href="#approach"><i class="fas fa-cogs"></i> Approach</a></li>
+                <li><a href="#summit"><i class="fas fa-calendar-alt"></i> Summit</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="#contact" class="btn"><i class="fas fa-rocket"></i> Get Started</a></li>
+                <li><a href="#summit" class="btn"><i class="fas fa-rocket"></i> Register</a></li>
             </ul>
         </nav>
         
@@ -1032,9 +1172,10 @@
         <ul>
             <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="#approach"><i class="fas fa-cogs"></i> Our Approach</a></li>
+            <li><a href="#approach"><i class="fas fa-cogs"></i> Approach</a></li>
+            <li><a href="#summit"><i class="fas fa-calendar-alt"></i> Summit</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            <li><a href="#contact" class="btn"><i class="fas fa-rocket"></i> Get Started</a></li>
+            <li><a href="#summit" class="btn"><i class="fas fa-rocket"></i> Register</a></li>
         </ul>
     </div>
     
@@ -1045,8 +1186,8 @@
         <h1>Transforming Agriculture<br><span>in Zambia</span></h1>
         <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 25px;">Sustainable farming solutions for a greener tomorrow. Join us in revolutionizing agriculture with innovative techniques and community empowerment.</p>
         <div>
-            <a href="#about" class="btn floating">Learn More <i class="fas fa-arrow-down"></i></a>
-            <a href="#contact" class="btn btn-secondary floating">Contact Us <i class="fas fa-paper-plane"></i></a>
+            <a href="#summit" class="btn floating">AgriLink Summit 2025 <i class="fas fa-calendar-alt"></i></a>
+            <a href="#about" class="btn btn-secondary floating">Learn More <i class="fas fa-arrow-down"></i></a>
         </div>
     </section>
 
@@ -1124,57 +1265,59 @@
                 <p>Implementing solar-powered solutions for irrigation and processing to reduce carbon footprint and operational costs.</p>
             </div>
         </div>
-        
-        <div style="margin-top: 60px;">
-            <h3 style="text-align: center; margin-bottom: 35px;">Climate-Smart Agriculture</h3>
-            <p style="text-align: center; max-width: 850px; margin: 0 auto 35px;">We implement climate-resilient farming practices that adapt to changing weather patterns while reducing agriculture's environmental impact. Our approach includes:</p>
+    </section>
+
+    <!-- Summit Section -->
+    <section class="summit" id="summit">
+        <span class="section-title">AgriLink Youth Summit 2025</span>
+        <h2>Bridging the Gap Between Legacy & Innovation</h2>
+        <div class="summit-content">
+            <div class="summit-details fade-in">
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Mulungushi International Conference Centre, Lusaka</p>
+                <p><i class="fas fa-calendar-day"></i> <strong>Date:</strong> October 31st, 2025</p>
+                <p><i class="fas fa-clock"></i> <strong>Time:</strong> 8:00 AM - 4:00 PM </p>
+            </div>
             
-            <div class="grid" style="margin-top: 45px;">
-                <div class="fade-in delay-1">
-                    <i class="fas fa-leaf impact-icon"></i>
-                    <p><strong>Drought-resistant crop varieties</strong> that thrive in changing climate conditions</p>
-                </div>
-                <div class="fade-in delay-2">
-                    <i class="fas fa-mountain impact-icon"></i>
-                    <p><strong>Soil conservation techniques</strong> to prevent erosion and maintain fertility</p>
-                </div>
-                <div class="fade-in delay-3">
-                    <i class="fas fa-water impact-icon"></i>
-                    <p><strong>Precision irrigation systems</strong> that optimize water usage</p>
-                </div>
-                <div class="fade-in delay-4">
-                    <i class="fas fa-bug impact-icon"></i>
-                    <p><strong>Integrated pest management</strong> reducing chemical dependency</p>
-                </div>
-                <div class="fade-in delay-5">
-                    <i class="fas fa-tree impact-icon"></i>
-                    <p><strong>Agroforestry practices</strong> that enhance biodiversity</p>
-                </div>
-                <div class="fade-in delay-6">
-                    <i class="fas fa-recycle impact-icon"></i>
-                    <p><strong>Sustainable crop rotation</strong> systems to maintain soil health</p>
+            <p>Join us for the premier agricultural innovation summit in Zambia, bringing together farmers, innovators, policymakers, and youth leaders to shape the future of sustainable agriculture.</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="attendee">Attendee Registration</button>
+                <button class="tab-btn" data-tab="exhibitor">Exhibitor Registration</button>
+            </div>
+            
+            <div class="tab-content active" id="attendee-content">
+                <div class="register-option fade-in">
+                    <h4><i class="fas fa-user"></i> Attendee Registration</h4>
+                    <p>For all participants interested in attending the summit</p>
+                    <ul>
+                        <li>Access to all conference sessions</li>
+                        <li>Networking opportunities with industry leaders</li>
+                        <li>Speed Mentoring participation</li>
+                        <li>Refreshments included</li>
+                        <li>Conference materials</li>
+                    </ul>
+                    
+                    <button class="btn register-btn" data-modal="modal-attendee">
+                        Register as Attendee <i class="fas fa-external-link-alt"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-        
-        <div style="margin-top: 60px;">
-            <h3 style="text-align: center; margin-bottom: 45px;">Our Impact</h3>
-            <div class="grid">
-                <!-- Only 3 boxes as requested -->
-                <div class="fade-in delay-1">
-                    <i class="fas fa-users impact-icon"></i>
-                    <span class="counter" data-target="250">0</span>
-                    <p>Farmers Trained in climate-smart agriculture techniques</p>
-                </div>
-                <div class="fade-in delay-2">
-                    <i class="fas fa-chart-line impact-icon"></i>
-                    <span class="counter" data-target="45">0</span><span>%</span>
-                    <p>Yield Increase - average improvement for participating farms</p>
-                </div>
-                <div class="fade-in delay-3">
-                    <i class="fas fa-hand-holding-water impact-icon"></i>
-                    <span class="counter" data-target="120">0</span>
-                    <p>Water Projects - sustainable irrigation systems installed</p>
+            
+            <div class="tab-content" id="exhibitor-content">
+                <div class="register-option fade-in">
+                    <h4><i class="fas fa-store"></i> Exhibitor Booth</h4>
+                    <p>For companies and organizations showcasing agricultural innovations</p>
+                    <ul>
+                        <li>Variety exhibition spaces</li>
+                        <li>Basic setup (table, chairs, power)</li>
+                        <li>Company listing in summit directory</li>
+                        <li>Two attendee passes</li>
+                        <li>Access to networking events</li>
+                    </ul>
+                    
+                    <button class="btn register-btn" data-modal="modal-exhibitor">
+                        Register Exhibitor Booth <i class="fas fa-external-link-alt"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1246,7 +1389,7 @@
         <div class="footer-content">
             <div class="footer-column">
                 <!-- Logo in footer -->
-                <img src="HongoHarv_Logo.png" alt="HongoHarvest Logo" class="footer-logo">
+                <img src="https://via.placeholder.com/90x90/1b6d42/ffffff?text=HH" alt="HongoHarvest Logo" class="footer-logo">
                 <p style="opacity: 0.9; margin-bottom: 15px;">Transforming Zambian agriculture through sustainable practices, innovation, and community empowerment since 2025.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1260,16 +1403,15 @@
                     <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                     <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                     <li><a href="#approach"><i class="fas fa-chevron-right"></i> Our Approach</a></li>
+                    <li><a href="#summit"><i class="fas fa-chevron-right"></i> Summit 2025</a></li>
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Farmers Spotlight</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Our Programs</h3>
+                <h3>Our Programs | coming soon</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-seedling"></i> Webinars</a></li>
-                    <li><a href="#"><i class="fas fa-female"></i> Podcasts</a></li>
+                    <li><a href="#"><i class="fas fa-seedling"></i> Youth Training</a></li>
+                    <li><a href="#"><i class="fas fa-female"></i> Women in Agriculture</a></li>
                     <li><a href="#"><i class="fas fa-tint"></i> Water Conservation</a></li>
                     <li><a href="#"><i class="fas fa-water"></i> Sustainable Irrigation</a></li>
                     <li><a href="#"><i class="fas fa-store"></i> Market Access Initiative</a></li>
@@ -1294,6 +1436,31 @@
             </p>
         </div>
     </footer>
+    
+    <!-- Registration Modals -->
+    <div id="modal-attendee" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQ1ZprxIGboczRrBjgDQ_h2_QP9ffKRgBx2ZAC6L86yvfY0g/viewform?embedded=true" 
+                    class="modal-iframe" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Loading…
+            </iframe>
+        </div>
+    </div>
+    
+    <div id="modal-exhibitor" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDAHFHh6NkaPqyjN60n7m5t8a-IMOv8Zn2K7upDIZY14vmPQ/viewform?embedded=true" 
+                    class="modal-iframe" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Loading…
+            </iframe>
+        </div>
+    </div>
 
     <script>
         // Mobile Navigation Toggle
@@ -1394,49 +1561,73 @@
             });
         }
         
-        // Counter animation for stats
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-        
-        const startCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText.replace('+', '');
-                    
-                    const increment = target / speed;
-                    
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 10);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
+        // Tab switching for summit registration
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
                 
-                updateCount();
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get target tab content
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Show target tab content
+                document.getElementById(`${targetTab}-content`).classList.add('active');
             });
-        };
+        });
         
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
+        // Animation for summit options
+        const summitObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fade-in');
-                    if (entry.target.querySelector('.counter')) {
-                        startCounters();
-                    }
-                    observer.unobserve(entry.target);
+                    summitObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
         
-        document.querySelectorAll('.about > div, .approach > div, .contact > div, .grid > div, .gallery-item').forEach(element => {
-            observer.observe(element);
+        document.querySelectorAll('.register-option').forEach(element => {
+            summitObserver.observe(element);
+        });
+        
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const registerBtns = document.querySelectorAll('.register-btn');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        
+        // Open modal
+        registerBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close modal when clicking outside content
+        window.addEventListener('click', function(event) {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
         });
     </script>
 </body>
